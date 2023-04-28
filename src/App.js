@@ -4,7 +4,7 @@ import AppHeader from './components/AppHeader/AppHeader'
 import AddTodo from './components/AddTodo/AddTodo'
 import TodoList from './components/TodoList/TodoList'
 import Footer from './components/Footer/Footer'
-import { Component } from 'react';
+import React, { Component } from 'react';
 
 //КОМПОНЕНТЫ КЛАССЫ используются у тех компонентов которые должны иметь состояние, 
 // кнопки, todoListItem - является ли она важной, завершенной, и тд, 

@@ -2,6 +2,7 @@ import './Footer.css'
 import TodoCount from'../TodoCount/TodoCount'
 import Filters from'../Filters/Filters'
 import ClearCompleted from'../ClearCompleted/ClearCompleted'
+import React from 'react'
 
 const Footer = ({doneCount, viewActiveItem, 
                 viewAllItem, viewCompletedItem, clearComplited}) => {
