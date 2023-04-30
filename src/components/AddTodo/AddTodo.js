@@ -1,36 +1,65 @@
-import React, { Component } from 'react'
+import React, { useState } from 'react'
 import './AddTodo.css'
 
 
-export default class AddTodo extends Component {
+const AddTodo = (props) => {
 
-  state = {
-    label: ''    
-  } 
+  const [label, setLabel] = useState('')
 
-  onChangeInput = (event) => {
-    this.setState({
-      label: event.target.value
-    })               
-  } 
+  const onChangeInput = (event) => {
+    setLabel(event.target.value)
+  }
 
-  onKeyDown = (event) => {    
+  const onKeyDown = (event) =>  {
     if(event.key === "Enter"){
       const date = new Date().getTime();
-      this.props.addItem(this.state.label, date)
-      this.setState({
-        label: ''        
-      })
-    }         
+      props.addItem(label, date)
+      setLabel('')
+    } 
   }
 
-  render() {   
-    return (
-      <input className = "new-todo" placeholder = "What needs to be done?"       
-             onChange={this.onChangeInput} 
-             onKeyDown = {this.onKeyDown}   
-             value = {this.state.label}          
+  return (
+    <input className = "new-todo" placeholder = "What needs to be done?"       
+             onChange={onChangeInput} 
+             onKeyDown = {onKeyDown}   
+             value = {label}          
       />
-    )
-  }
+  )
 }
+
+export default AddTodo
+
+
+
+// export default class AddTodo extends Component {
+
+//   state = {
+//     label: ''    
+//   } 
+
+//   onChangeInput = (event) => {
+//     this.setState({
+//       label: event.target.value
+//     })               
+//   } 
+
+//   onKeyDown = (event) => {    
+//     if(event.key === "Enter"){
+//       const date = new Date().getTime();
+//       this.props.addItem(this.state.label, date)
+//       this.setState({
+//         label: ''        
+//       })
+//     }         
+//   }
+
+//   render() {   
+//     return (
+//       <input className = "new-todo" placeholder = "What needs to be done?"       
+//              onChange={this.onChangeInput} 
+//              onKeyDown = {this.onKeyDown}   
+//              value = {this.state.label}          
+//       />
+//     )
+//   }
+// }

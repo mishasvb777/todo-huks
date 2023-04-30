@@ -7,9 +7,9 @@ const TodoList = ({ todos, changeStatusTusk, deleteItem, date, createDateTask, t
   
   //Перебираем todos массив, переданный через пропс, в elements будет массив готовых тудушек
   const elements = todos.map((item) => { 
-
     const {id, done, editing,  ...itemProps} = item // это делаем для того что бы не 
     //передавать в TodoListItem лишнее свойство id, и done, которое там не используется    
+
     let liClass = done ? 'completed' : ''   
     
     if (editing) liClass = 'editing'
