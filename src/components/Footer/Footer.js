@@ -1,20 +1,25 @@
 import './Footer.css'
-import TodoCount from'../TodoCount/TodoCount'
-import Filters from'../Filters/Filters'
-import ClearCompleted from'../ClearCompleted/ClearCompleted'
+import TodoCount from '../TodoCount/TodoCount'
+import Filters from '../Filters/Filters'
+import ClearCompleted from '../ClearCompleted/ClearCompleted'
 import React from 'react'
 
-const Footer = ({doneCount, viewActiveItem, 
-                viewAllItem, viewCompletedItem, clearComplited}) => {
+const Footer = ({
+  doneCount,
+  viewActiveItem,
+  viewAllItem,
+  viewCompletedItem,
+  clearComplited,
+}) => {
   return (
-    <footer className ="footer">
-      <TodoCount doneCount = {doneCount}/>
-      <Filters viewActiveItem = {viewActiveItem}
-               viewAllItem = {viewAllItem}
-               viewCompletedItem = {viewCompletedItem}
-               
+    <footer className="footer">
+      <TodoCount doneCount={doneCount} />
+      <Filters
+        viewActiveItem={viewActiveItem}
+        viewAllItem={viewAllItem}
+        viewCompletedItem={viewCompletedItem}
       />
-      <ClearCompleted clearComplited = {clearComplited}/>
+      <ClearCompleted clearComplited={clearComplited} />
     </footer>
   )
 }

@@ -1,13 +1,17 @@
 import React from 'react'
 import './ClearCompleted.css'
 
-function ClearCompleted ({clearComplited}) {
+function ClearCompleted({ clearComplited }) {
   return (
-    <button className="clear-completed"
-            onClick={() => {clearComplited()}}>
-    Clear completed
+    <button
+      className="clear-completed"
+      onClick={() => {
+        clearComplited()
+      }}
+    >
+      Clear completed
     </button>
   )
 }
 
-export default ClearCompleted;
+export default ClearCompleted
